@@ -4,24 +4,24 @@ export default class GameUI {
     }
 
     bindToDOM(container) {
-        this.score = container.querySelector(".score");
-        this.board = container.querySelector(".hole-board");
+        this.score = container.querySelector('.score');
+        this.board = container.querySelector('.hole-board');
     }
 
     drawBoard(size) {
-        let html = "";
+        let html = '';
         for (let i = 0; i < size ** 2; i++) {
             html += '<div class="hole"></div>';
         }
         this.board.innerHTML = html;
         // Если мышь с нажатой клавишей дёргается, click не возникает
-        this.board.addEventListener("mousedown", (event) => this.shot(event));
+        this.board.addEventListener('mousedown', (event) => this.shot(event));
 
-        this.holes = this.board.querySelectorAll(".hole");
+        this.holes = this.board.querySelectorAll('.hole');
 
-        this.goblin = document.createElement("img");
-        this.goblin.src = "img/goblin.png";
-        this.goblin.className = "goblin";
+        this.goblin = document.createElement('img');
+        this.goblin.src = 'img/goblin.png';
+        this.goblin.className = 'goblin';
     }
 
     drawGoblin(index) {
@@ -29,7 +29,7 @@ export default class GameUI {
     }
 
     hideGoblin() {
-        this.goblin.parentNode.innerHTML = "";
+        this.goblin.parentNode.innerHTML = '';
     }
 
     drawScore(hit, miss) {
@@ -37,11 +37,10 @@ export default class GameUI {
     }
 
     drawReady() {
-        this.score.textContent = "ГОТОВНОСТЬ!!!";
+        this.score.textContent = 'ГОТОВНОСТЬ!!!';
     }
 
     shot(event) {
-        this.hit =
-            event.target === this.goblin || event.target === this.goblin.parentNode;
+        this.hit = event.target === this.goblin || event.target === this.goblin.parentNode;
     }
 }
