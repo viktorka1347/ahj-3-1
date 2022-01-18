@@ -1,1 +1,1 @@
-https://github.com/viktorka1347/ahj-3-1.git
+https://viktorka1347.github.io/ahj-3-1/
