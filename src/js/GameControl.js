@@ -42,7 +42,6 @@ export default class GameControl {
       clearInterval(this.timerID);
       this.gameUI.hideGoblin();
       setTimeout(() => {
-        // eslint-disable-next-line no-alert
         alert('GAME OVER :(');
         this.start();
       }, 0);

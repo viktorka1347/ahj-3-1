@@ -41,6 +41,7 @@ export default class GameUI {
   }
 
   shot(event) {
-    this.hit = event.target === this.goblin || event.target === this.goblin.parentNode;
+    this.hit = event.target === this.goblin
+      || event.target === this.goblin.parentNode;
   }
 }
