@@ -43,7 +43,7 @@ export default class GameControl {
       this.gameUI.hideGoblin();
       setTimeout(() => {
         // eslint-disable-next-line no-alert
-        alert('GAME OVER');
+         alert('GAME OVER :(');
         this.start();
       }, 0);
     }
